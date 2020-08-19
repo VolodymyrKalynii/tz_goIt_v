@@ -1,0 +1,69 @@
+.service{
+  margin-top: 40px;
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  &__item{
+    width: calc(100%/3 - 30px);
+    margin: 10px 0 83px 30px;
+    padding: 0 0 0 60px;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      left: 0;
+      top: 5px;
+      background: url('../img/services.png') no-repeat;
+    }
+
+    &-photo{
+      &:before{
+        background-position-x: 0;
+      }
+    }
+    &-design{
+      &:before{
+        background-position-x: -32px;
+      }
+    }
+    &-creativity{
+      &:before{
+        background-position-x: -64px;
+      }
+    }
+    &-seo{
+      &:before{
+        background-position-x: -96px;
+      }
+    }
+    &-css{
+      &:before{
+        background-position-x: -128px;
+      }
+    }
+    &-digital{
+      &:before{
+        background-position-x: -160px;
+      }
+    }
+
+    &__title{
+      text-transform: uppercase;
+      font-size: $smallSmallFz;
+      margin-bottom: 12px;
+    }
+
+    &__text{
+      color: #999999;
+      font-size: $smallFz;
+      font-family: $subFont;
+      line-height: 24px;
+    }
+  }
+}

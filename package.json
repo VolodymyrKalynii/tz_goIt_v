@@ -1,0 +1,43 @@
+{
+  "name": "tz_goit_v",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "buildForProduction": "set ISOLATED=false&& set DEV=false&& npx webpack --config webpack.config.js --mode production",
+    "start": "set ISOLATED=true&& set DEV=true&& webpack-dev-server --config webpack.config.js --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.6",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^2.1.0",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.9.3",
+    "npx": "^10.2.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@babel/runtime": "^7.3.1",
+    "classlist-polyfill": "^1.2.0",
+    "dom-shims": "^0.1.4",
+    "group-css-media-queries-loader": "^3.0.2",
+    "ip": "^1.1.5"
+  }
+}

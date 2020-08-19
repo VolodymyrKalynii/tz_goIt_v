@@ -1,0 +1,122 @@
+.team{
+  margin-bottom: 80px;
+  &__text{
+    font-size: $smallFz;
+    padding: 28px 115px 50px;
+    font-family: $subFont;
+  }
+
+  &__items{
+    display: flex;
+    margin: 0 -15px;
+    margin-top: 37px;
+  }
+
+  &__item{
+    width: calc(100% / 3);
+    margin: 0 15px;
+  }
+}
+
+.employee{
+
+  &__image{
+    position: relative;
+    transition: all .2s;
+  }
+
+  &__img{
+    position: relative;
+
+    &:hover{
+      .employee__image, .employee__social{
+        margin: -10px 10px 10px -10px;
+        opacity: 1;
+      }
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #95e1d3;
+      z-index: -1;
+    }
+  }
+
+  &__social{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(243,129,129,.9) 0%, rgba(252,227,138,.9) 100%);
+    transition: all .2s;
+    opacity: 0;
+  }
+
+  &__socialInner{
+    display: flex;
+  }
+
+  &__link{
+    width: 56px;
+    height: 56px;
+    padding: 15px;
+    position: relative;
+    background: $mainColor;
+
+    &:hover{
+      background: #f38181;
+      .employee__icon{
+        fill: #fff;
+      }
+    }
+
+    &:after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #f9bd87;
+    }
+
+    &:last-child{
+      &:after{
+        content: none
+      }
+    }
+  }
+
+  &__icon{
+    display: block;
+    fill: #f38181;
+  }
+
+  &__info{
+    padding-top: 25px;
+    text-align: center;
+
+  }
+
+  &__name{
+    font-size: $smallSmallFz;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    font-weight: bold;
+  }
+
+  &__post{
+    font-family: $subFont;
+    color: #999;
+    font-style: italic;
+  }
+}

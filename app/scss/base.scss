@@ -1,0 +1,185 @@
+html,body{
+  height: 100%;
+}
+
+body{
+  font-size: $smallFz;
+  margin: 0;
+  color: #333333;
+  font-family: $mainFont;
+  //background: url('../img/gameBg.png') no-repeat fixed center !important;
+  background-size: cover !important;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+
+  @media screen and (max-width: 480px), screen and (max-height: 400px) {
+    padding: 5px 10px;
+  }
+}
+
+*{
+  outline:none;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 25px;
+  margin: 0;
+}
+
+a {
+  color: rgba(77, 161, 255, 0.9);
+  outline: none;
+}
+
+*:active, *:hover, *:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin: 0;
+}
+
+.h1{
+  font-size: $gigaBigFz;
+  line-height: .92em;
+}
+.h2{
+  font-size: $veryBigFz;
+}
+.h3{
+  font-size: $middleSmallFz;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 50px;
+
+  &:after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background: #f38181;
+    margin-right: -50%;
+    bottom: -38px;
+    transform: translateX(-50%)
+  }
+}
+.h4{
+  font-size: $normalBigFz;
+  margin-bottom: 10px;
+}
+
+.link{
+  padding: 10px 30px;
+  border: 3px solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all .2s;
+
+  &-white{
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &:hover{
+    border-color: $mainColor;
+    color: $mainColor;
+  }
+}
+
+figure{
+  margin: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  border: none;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  padding:0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+.styledTitle{
+  font-family: $styledFont;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  transform: translate3d(-2px, 0, 0)
+}
+
+.shake {
+  animation-name: shake
+}
+
+@keyframes shake {
+  0%, to {
+    transform: translateZ(0)
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-2px, 0, 0)
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(2px, 0, 0)
+  }
+}
+
+
+@mixin dn1000() {
+  @media screen and (max-width: 1000px){
+    display: none;
+  }
+}
+
+@mixin dn($width) {
+  @media screen and (max-width: $width+px){
+    display: none;
+  }
+}
+
+@mixin dnHeight($height) {
+  @media screen and (max-height: $height+px) {
+    display: none;
+  }
+}
+

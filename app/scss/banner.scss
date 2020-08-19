@@ -1,0 +1,103 @@
+@import '_mixins';
+
+.banner{
+  padding-top: 27px;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(243,129,129,.9) 0%, rgba(252,227,138,.9) 100%);
+
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    background: url('../img/eagle.png') no-repeat center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  &__content{
+    color: #fff;
+    text-align: center;
+    padding: 150px 150px 240px;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    padding-bottom: 125px;
+    padding-top: 27px;
+  }
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+
+  &__right{
+    display: flex;
+    padding-top: 2px;
+  }
+}
+
+.logo{
+  &__title{
+    font-weight: 700;
+    color: #fff;
+    font-size: $middleSmallFz;
+  }
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+
+  &__link{
+    margin: 0 27px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: $smallSmallFz;
+    text-decoration: none;
+    transition: all .2s;
+    position: relative;
+
+    &:hover{
+      color: $mainColor;
+
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        height: 3px;
+
+        background: $mainColor;
+      }
+    }
+  }
+}
+
+.shop{
+  display: flex;
+
+  &__link{
+    margin-left: 30px;
+
+    &:first-child{
+      margin-left: 20px;
+    }
+  }
+
+  &__icon{
+    width: 27px;
+    height: 27px;
+    padding: 5px;
+    fill: #fff;
+
+
+    &:hover{
+      fill: $mainColor;
+    }
+  }
+}
